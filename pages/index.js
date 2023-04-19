@@ -11,6 +11,8 @@ export async function getStaticProps() {
     },
   };
 }
+
+// 在server執行，console會出現在terminal
 export default function Home({ allPostsData }) {
   return (
     <Layout home>
