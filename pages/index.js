@@ -4,9 +4,13 @@ import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Date from '../components/date';
+import loadPosts from './api/loadPosts';
 
 // 在server執行，console會出現在terminal
 export async function getStaticProps() {
+  // just for test. todo: delete
+  console.log('getStaticProps and call loadPosts');
+  loadPosts();
   const allPostsData = getSortedPostsData();
   return {
     props: {
