@@ -8,7 +8,6 @@ import loadPosts from './api/loadPosts';
 
 // 在server執行，console會出現在terminal
 export async function getStaticProps() {
-  // just for test. todo: delete
   console.log('getStaticProps and call loadPosts');
   loadPosts();
   const allPostsData = getSortedPostsData();
